@@ -1,4 +1,4 @@
-#
+00000#
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -102,11 +102,8 @@ BOARD_CHARGER_DISABLE_INIT_BLANK := true
 # CNE / DPM
 BOARD_USES_QCNE := true
 
-# Cpusets
-ENABLE_CPUSETS := true
-
-# Crypto
-TARGET_HW_DISK_ENCRYPTION := true
+# Charger
+BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(VENDOR_PATH)/charger/images
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
