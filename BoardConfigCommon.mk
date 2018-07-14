@@ -1,4 +1,4 @@
-00000#
+#
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -142,6 +142,10 @@ BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := exfat
+TARGET_KERNEL_HAVE_EXFAT := true
+
 #FM
 BOARD_HAVE_QCOM_FM := true
 TARGET_QCOM_NO_FM_FIRMWARE := true
@@ -203,7 +207,7 @@ endif
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
